@@ -1,0 +1,241 @@
+/* =========================
+   Hero Section
+========================= */
+
+.hero-section {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  min-height: 860px;
+  background: var(--seven-cream);
+  color: var(--seven-ink);
+  overflow: hidden;
+}
+
+.hero-section::before,
+.hero-section::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 360px;
+  height: 360px;
+  pointer-events: none;
+  opacity: 0.28;
+  background-image: radial-gradient(
+    rgba(96, 50, 28, 0.16) 1px,
+    transparent 1.2px
+  );
+  background-size: 14px 14px;
+  mask-image: radial-gradient(circle, black 0%, transparent 70%);
+}
+
+.hero-section::before {
+  top: 64px;
+  left: 42px;
+}
+
+.hero-section::after {
+  right: 42px;
+  bottom: 72px;
+}
+
+.hero-section__inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1180px;
+  min-height: 860px;
+  margin: 0 auto;
+  padding: 38px 28px 58px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-section__copy {
+  width: 100%;
+  text-align: center;
+}
+
+.hero-section__title {
+  max-width: 1080px;
+  margin: 0 auto;
+  font-family: var(--font-display);
+  font-size: clamp(52px, 4.8vw, 68px);
+  font-weight: 400;
+  line-height: 0.93;
+  letter-spacing: 0;
+  color: var(--seven-ink);
+}
+
+.hero-section__title-line {
+  display: block;
+  white-space: nowrap;
+}
+
+.hero-section__title-strong {
+  font-weight: 600;
+}
+
+.hero-section__subtitle {
+  max-width: 740px;
+  margin: 26px auto 0;
+  font-family: var(--font-body);
+  font-size: clamp(19px, 1.32vw, 22px);
+  font-weight: 300;
+  line-height: 1.18;
+  letter-spacing: 0;
+  color: var(--seven-ink);
+}
+
+.hero-section__subtitle::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 1px;
+  margin: 26px auto 0;
+  background: rgba(35, 24, 19, 0.25);
+}
+
+.hero-section__gallery {
+  width: 100%;
+  max-width: 1120px;
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 5px;
+}
+
+.hero-section__image-frame {
+  width: 100%;
+  height: 265px;
+  margin: 0;
+  overflow: hidden;
+  background: var(--seven-muted);
+}
+
+.hero-section__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.92) contrast(1.03);
+}
+
+.hero-section__image-frame:nth-child(1) .hero-section__image {
+  object-position: center center;
+}
+
+.hero-section__image-frame:nth-child(2) .hero-section__image {
+  object-position: center center;
+}
+
+.hero-section__image-frame:nth-child(3) .hero-section__image {
+  object-position: center center;
+}
+
+.hero-section__cta {
+  width: 420px;
+  min-height: 58px;
+  margin: 30px auto 0;
+  align-self: center;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: var(--seven-brown);
+  color: var(--seven-cream);
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+  box-shadow: 0 16px 34px rgba(96, 50, 28, 0.14);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    opacity 180ms ease;
+}
+
+.hero-section__cta:hover {
+  opacity: 0.96;
+  transform: translateY(-2px);
+  box-shadow: 0 20px 40px rgba(96, 50, 28, 0.2);
+}
+
+.hero-section__cta:active {
+  transform: translateY(0);
+}
+
+/* =========================
+   Notebook Adjustment
+========================= */
+
+@media (max-width: 1366px) {
+  .hero-section {
+    min-height: 820px;
+  }
+
+  .hero-section__inner {
+    max-width: 1080px;
+    min-height: 820px;
+    padding: 34px 28px 54px;
+  }
+
+  .hero-section__title {
+    max-width: 1000px;
+    font-size: clamp(48px, 4.4vw, 62px);
+  }
+
+  .hero-section__subtitle {
+    max-width: 700px;
+    margin-top: 24px;
+    font-size: 19px;
+  }
+
+  .hero-section__subtitle::after {
+    margin-top: 24px;
+  }
+
+  .hero-section__gallery {
+    max-width: 1020px;
+    margin-top: 30px;
+  }
+
+  .hero-section__image-frame {
+    height: 245px;
+  }
+
+  .hero-section__cta {
+    width: 400px;
+    min-height: 56px;
+    margin-top: 28px;
+    margin-left: auto;
+    margin-right: auto;
+    align-self: center;
+    font-size: 21px;
+  }
+}
+
+/* =========================
+   Tablet Safety
+========================= */
+
+@media (max-width: 900px) {
+  .hero-section__title-line {
+    white-space: normal;
+  }
+
+  .hero-section__gallery {
+    grid-template-columns: 1fr;
+    max-width: 520px;
+  }
+
+  .hero-section__image-frame {
+    height: 260px;
+  }
+
+  .hero-section__cta {
+    width: min(100%, 360px);
+  }
+}

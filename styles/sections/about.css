@@ -1,0 +1,298 @@
+/* =========================
+   About Section
+========================= */
+
+.about-section {
+  width: 100%;
+  overflow: hidden;
+  background: var(--seven-cream);
+  color: var(--seven-ink);
+}
+
+/* =========================
+   About Hero
+========================= */
+
+.about-section__hero {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  height: clamp(420px, 32vw, 500px);
+  display: flex;
+  align-items: flex-end;
+  background: var(--seven-dark-card);
+  color: var(--seven-cream);
+  overflow: hidden;
+}
+
+.about-section__watermark {
+  position: absolute;
+  z-index: 0;
+  left: 50%;
+  top: -330px;
+  width: min(960px, 78vw);
+  height: auto;
+  max-width: none;
+  opacity: 0.045;
+  transform: translateX(-50%);
+  filter: brightness(0) invert(1);
+  pointer-events: none;
+  user-select: none;
+}
+
+.about-section__heading {
+  position: relative;
+  z-index: 1;
+  width: min(1280px, 100%);
+  margin: 0 auto;
+  padding: 0 clamp(28px, 4vw, 56px) 36px;
+}
+
+.about-section__eyebrow {
+  margin: 0 0 6px clamp(118px, 9vw, 155px);
+  font-family: var(--font-body);
+  font-size: clamp(14px, 1vw, 17px);
+  font-weight: 300;
+  line-height: 1;
+  color: var(--seven-cream);
+  white-space: nowrap;
+}
+
+.about-section__title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(88px, 8.8vw, 132px);
+  font-weight: 600;
+  line-height: 0.84;
+  letter-spacing: 0;
+  color: var(--seven-cream);
+}
+
+.about-section__title span {
+  display: block;
+}
+
+/* =========================
+   About Content
+========================= */
+
+.about-section__content {
+  width: 100%;
+  padding: clamp(72px, 7vw, 108px) 28px clamp(78px, 7vw, 116px);
+  background: var(--seven-cream);
+}
+
+.about-section__bio {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 430px;
+  align-items: center;
+  gap: clamp(64px, 7vw, 108px);
+}
+
+.about-section__text-panel {
+  width: 100%;
+  background: transparent;
+}
+
+.about-section__copy {
+  max-width: 560px;
+  font-family: var(--font-body);
+  font-size: clamp(20px, 1.42vw, 23px);
+  font-weight: 300;
+  line-height: 1.12;
+  color: var(--seven-ink);
+}
+
+.about-section__copy p {
+  margin: 0;
+}
+
+.about-section__copy p + p {
+  margin-top: 26px;
+}
+
+/* =========================
+   About Photo
+========================= */
+
+.about-section__photo-panel {
+  position: relative;
+  width: 100%;
+  min-height: 560px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-section__photo-panel::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  right: -52px;
+  top: 50%;
+  width: 108%;
+  height: 78%;
+  background: rgba(96, 50, 28, 0.92);
+  border-radius: 999px;
+  transform: translateY(-50%) rotate(-5deg);
+}
+
+.about-section__photo-panel::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  left: -34px;
+  bottom: 58px;
+  width: 58%;
+  height: 34%;
+  background: rgba(96, 50, 28, 0.14);
+  border: 2px solid rgba(96, 50, 28, 0.28);
+  border-radius: 999px;
+  transform: rotate(8deg);
+}
+
+.about-section__portrait-frame {
+  position: relative;
+  z-index: 1;
+  width: min(430px, 100%);
+  aspect-ratio: 4 / 4.85;
+  overflow: hidden;
+  background: var(--seven-dark-card);
+  box-shadow: 0 24px 48px rgba(35, 24, 19, 0.12);
+}
+
+.about-section__portrait-frame::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  right: -70px;
+  top: -70px;
+  width: 190px;
+  height: 190px;
+  background: rgba(255, 247, 234, 0.1);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.about-section__portrait-frame::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  inset: auto 0 0;
+  height: 34%;
+  background: linear-gradient(
+    180deg,
+    rgba(21, 13, 10, 0) 0%,
+    rgba(21, 13, 10, 0.74) 100%
+  );
+  pointer-events: none;
+}
+
+.about-section__portrait {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.about-section__caption {
+  position: absolute;
+  z-index: 3;
+  left: 28px;
+  bottom: 28px;
+  margin: 0;
+  color: var(--seven-cream);
+}
+
+.about-section__caption strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(26px, 2.2vw, 34px);
+  font-weight: 600;
+  line-height: 1;
+}
+
+.about-section__caption span {
+  display: block;
+  margin-top: 7px;
+  font-family: var(--font-body);
+  font-size: clamp(16px, 1.25vw, 20px);
+  font-weight: 300;
+  line-height: 1;
+  color: rgba(255, 247, 234, 0.86);
+}
+
+/* =========================
+   Notebook Adjustments
+========================= */
+
+@media (max-width: 1366px) {
+  .about-section__hero {
+    height: 430px;
+  }
+
+  .about-section__watermark {
+    top: -315px;
+    width: 900px;
+  }
+
+  .about-section__heading {
+    padding-bottom: 34px;
+  }
+
+  .about-section__title {
+    font-size: 118px;
+  }
+
+  .about-section__eyebrow {
+    margin-left: 142px;
+    font-size: 15px;
+  }
+
+  .about-section__content {
+    padding-top: 78px;
+    padding-bottom: 88px;
+  }
+
+  .about-section__bio {
+    width: min(1040px, 100%);
+    grid-template-columns: minmax(0, 1fr) 390px;
+    gap: 76px;
+  }
+
+  .about-section__copy {
+    max-width: 520px;
+    font-size: 21px;
+  }
+
+  .about-section__copy p + p {
+    margin-top: 23px;
+  }
+
+  .about-section__photo-panel {
+    min-height: 520px;
+  }
+
+  .about-section__portrait-frame {
+    width: min(390px, 100%);
+  }
+
+  .about-section__photo-panel::before {
+    right: -42px;
+    width: 108%;
+    height: 78%;
+  }
+
+  .about-section__photo-panel::after {
+    left: -28px;
+    bottom: 54px;
+    width: 56%;
+    height: 32%;
+  }
+}

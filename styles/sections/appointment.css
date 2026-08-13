@@ -1,0 +1,245 @@
+/* =========================
+   Appointment Section
+========================= */
+
+.appointment-section {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  padding: clamp(72px, 6.4vw, 96px) 28px;
+  background: var(--seven-dark-card);
+  color: var(--seven-cream);
+  overflow: hidden;
+}
+
+.appointment-section__watermark {
+  position: absolute;
+  z-index: 0;
+  right: -340px;
+  top: -240px;
+  width: min(1060px, 78vw);
+  height: auto;
+  max-width: none;
+  opacity: 0.045;
+  filter: brightness(0) invert(1);
+  pointer-events: none;
+  user-select: none;
+}
+
+.appointment-section__card {
+  position: relative;
+  z-index: 1;
+  width: min(1010px, 100%);
+  margin: 0 auto;
+  padding: 34px 54px;
+  background: rgba(16, 9, 7, 0.78);
+  border-radius: 38px;
+}
+
+.appointment-section__header {
+  max-width: 660px;
+  margin: 0 auto 30px;
+  text-align: center;
+}
+
+.appointment-section__header h2 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(38px, 3.7vw, 54px);
+  font-weight: 400;
+  line-height: 0.9;
+  letter-spacing: 0;
+  color: var(--seven-cream);
+}
+
+.appointment-section__header p {
+  max-width: 560px;
+  margin: 14px auto 0;
+  font-family: var(--font-body);
+  font-size: clamp(16px, 1.08vw, 19px);
+  font-weight: 300;
+  line-height: 1.08;
+  color: rgba(255, 247, 234, 0.82);
+}
+
+/* =========================
+   Form
+========================= */
+
+.appointment-form {
+  width: 100%;
+}
+
+.appointment-form__row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
+  align-items: start;
+  margin: 0;
+}
+
+.appointment-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+}
+
+.appointment-form > .appointment-form__field {
+  margin-top: 18px;
+}
+
+.appointment-form__row .appointment-form__field {
+  margin-top: 0;
+}
+
+.appointment-form__field span {
+  display: block;
+  min-height: 16px;
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: clamp(14px, 0.95vw, 16px);
+  font-weight: 300;
+  line-height: 1;
+  color: rgba(255, 247, 234, 0.9);
+}
+
+.appointment-form input[type="text"],
+.appointment-form input[type="tel"],
+.appointment-form input[type="email"],
+.appointment-form textarea {
+  width: 100%;
+  border: 1px solid transparent;
+  outline: none;
+  background: rgba(45, 24, 18, 0.76);
+  color: var(--seven-cream);
+  font-family: var(--font-body);
+  font-size: 17px;
+  font-weight: 300;
+  transition:
+    border-color 180ms ease,
+    background 180ms ease;
+}
+
+.appointment-form input[type="text"],
+.appointment-form input[type="tel"],
+.appointment-form input[type="email"] {
+  height: 48px;
+  padding: 0 18px;
+  border-radius: 13px;
+}
+
+.appointment-form textarea {
+  min-height: 104px;
+  padding: 16px 18px;
+  resize: vertical;
+  border-radius: 13px;
+}
+
+.appointment-form input:focus,
+.appointment-form textarea:focus {
+  border-color: rgba(255, 247, 234, 0.42);
+  background: rgba(55, 29, 21, 0.9);
+}
+
+.appointment-form__consent {
+  margin: 20px 0 0;
+  display: grid;
+  grid-template-columns: 18px minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+  font-family: var(--font-body);
+  font-size: clamp(13px, 0.92vw, 15px);
+  font-weight: 300;
+  line-height: 1.3;
+  color: rgba(255, 247, 234, 0.9);
+}
+
+.appointment-form__consent input {
+  width: 18px;
+  height: 18px;
+  margin: 2px 0 0;
+  accent-color: var(--seven-cream);
+}
+
+.appointment-form__button {
+  width: min(430px, 100%);
+  min-height: 54px;
+  margin: 26px auto 0;
+  padding: 14px 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 14px;
+  cursor: pointer;
+  background: var(--seven-cream);
+  color: var(--seven-ink);
+  font-family: var(--font-display);
+  font-size: clamp(21px, 1.7vw, 27px);
+  font-weight: 600;
+  line-height: 1;
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease;
+}
+
+.appointment-form__button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.appointment-form__note {
+  max-width: 500px;
+  margin: 10px auto 0;
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: clamp(11px, 0.84vw, 13px);
+  font-weight: 300;
+  line-height: 1.22;
+  color: rgba(255, 247, 234, 0.74);
+}
+
+/* =========================
+   Notebook
+========================= */
+
+@media (max-width: 1366px) {
+  .appointment-section {
+    padding-top: 72px;
+    padding-bottom: 78px;
+  }
+
+  .appointment-section__card {
+    width: min(940px, 100%);
+    padding: 32px 52px;
+  }
+
+  .appointment-section__header {
+    margin-bottom: 28px;
+  }
+
+  .appointment-section__header h2 {
+    font-size: 49px;
+  }
+
+  .appointment-section__header p {
+    font-size: 17px;
+  }
+
+  .appointment-form input[type="text"],
+  .appointment-form input[type="tel"],
+  .appointment-form input[type="email"] {
+    height: 46px;
+  }
+
+  .appointment-form textarea {
+    min-height: 96px;
+  }
+
+  .appointment-form__button {
+    min-height: 52px;
+    margin-top: 24px;
+    font-size: 24px;
+  }
+}
