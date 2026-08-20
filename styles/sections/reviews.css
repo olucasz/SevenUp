@@ -92,3 +92,47 @@
     font-size: 19px;
   }
 }
+
+@media (max-width: 768px) {
+  .reviews-section {
+    padding: 48px 0;
+  }
+
+  .reviews-section__inner {
+    width: calc(100% - 40px);
+    grid-template-columns: 1fr;
+  }
+
+  .review-card {
+    min-height: auto;
+    padding: 28px 0;
+    gap: 24px;
+  }
+
+  .review-card + .review-card {
+    border-left: 0;
+    border-top: 1px solid rgba(96, 50, 28, 0.32);
+  }
+
+  .review-card__meta h3 {
+    font-size: 28px;
+  }
+
+  .review-card__meta p {
+    margin-top: 5px;
+    font-size: 15px;
+    line-height: 1.2;
+  }
+
+  .review-card__stars {
+    margin-top: 14px;
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
+
+  .review-card blockquote {
+    padding-top: 20px;
+    font-size: 17px;
+    line-height: 1.25;
+  }
+}

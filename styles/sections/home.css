@@ -52,7 +52,7 @@
 
 .site-nav a {
   font-family: var(--font-display);
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 1;
   color: var(--seven-ink);
@@ -60,10 +60,11 @@
 }
 
 .site-header__logo {
-  width: 92px;
-  height: 64px;
+  width: 52px;
+  height: 24px;
   display: grid;
   place-items: center;
+  align-content: center;
 }
 
 .site-header__logo img {
@@ -202,4 +203,112 @@
   width: 360px;
   height: auto;
   object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .site-header {
+    height: var(--header-height);
+    border-bottom: 1px solid rgba(96, 50, 28, 0.12);
+  }
+
+  .site-nav {
+    display: flex;
+    justify-content: center;
+    padding: 0 18px;
+  }
+
+  .site-nav__group {
+    display: none;
+  }
+
+  .site-header__logo {
+    width: 74px;
+    height: 52px;
+  }
+
+  .site-header__logo img {
+    width: 74px;
+    height: 52px;
+  }
+
+  .home-hero {
+    height: calc(100svh - var(--header-height));
+    min-height: 620px;
+    max-height: 760px;
+  }
+
+  .home-hero__background {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .home-hero__image-panel::after {
+    background: rgba(35, 24, 19, 0.22);
+  }
+
+  .home-hero__image-panel--left .home-hero__image {
+    object-position: 45% center;
+  }
+
+  .home-hero__image-panel--right .home-hero__image {
+    object-position: 56% center;
+  }
+
+  .home-hero__title {
+    top: 51%;
+    width: 100%;
+    line-height: 0.86;
+  }
+
+  .home-hero__line {
+    white-space: nowrap;
+  }
+
+  .home-hero__line--top {
+    font-size: clamp(36px, 11.4vw, 46px);
+  }
+
+  .home-hero__line--middle {
+    margin-top: -4px;
+    font-size: clamp(52px, 14.8vw, 62px);
+  }
+
+  .home-hero__line--bottom {
+    margin-top: -2px;
+    font-size: clamp(36px, 11vw, 44px);
+  }
+
+  .home-hero__word--a {
+    margin-right: 6px;
+  }
+
+  .home-hero__word--floresce {
+    transform: translateX(-2px);
+  }
+
+  .home-hero__word--no {
+    margin-right: 8px;
+  }
+
+  .home-hero__brand {
+    top: calc(51% + 92px);
+    width: 124px;
+  }
+
+  .home-hero__brand-logo {
+    width: 124px;
+  }
+}
+
+@media (max-width: 374px) {
+  .home-hero__line--top {
+    font-size: 36px;
+  }
+
+  .home-hero__line--middle {
+    font-size: 52px;
+  }
+
+  .home-hero__line--bottom {
+    font-size: 36px;
+  }
 }

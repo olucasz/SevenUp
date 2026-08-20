@@ -109,3 +109,43 @@
     font-size: 15px;
   }
 }
+
+@media (max-width: 768px) {
+  .site-footer {
+    padding: 34px 22px 36px;
+  }
+
+  .site-footer__inner {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .site-footer__brand {
+    width: 160px;
+    margin-top: 0;
+  }
+
+  .site-footer__nav {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 26px;
+  }
+
+  .site-footer__group h2 {
+    margin-bottom: 12px;
+    font-size: 23px;
+  }
+
+  .site-footer__group a {
+    font-size: 15px;
+    line-height: 1.45;
+  }
+
+  .site-footer__group--secondary {
+    margin-top: 35px;
+  }
+
+  .site-footer__social {
+    justify-self: start;
+  }
+}

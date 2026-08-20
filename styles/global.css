@@ -29,7 +29,7 @@
   --page-width: 1280px;
   --nav-width: 1320px;
 
-  --header-height: 86px;
+  --header-height: 75px;
 
   --z-base: 1;
   --z-content: 5;
@@ -113,4 +113,32 @@ select {
 :focus-visible {
   outline: 2px solid var(--seven-brown);
   outline-offset: 4px;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --header-height: 64px;
+  }
+
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  body {
+    padding-top: var(--header-height);
+  }
+
+  main {
+    overflow: hidden;
+  }
+
+  img,
+  svg,
+  video,
+  iframe {
+    max-width: 100%;
+  }
 }
