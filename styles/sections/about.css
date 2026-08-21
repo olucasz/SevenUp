@@ -49,12 +49,11 @@
 }
 
 .about-section__eyebrow {
-  /* margin: 0 0 6px clamp(118px, 9vw, 155px); */
+  margin: 0 0 8px 2px;
   font-family: var(--font-body);
-  /* font-size: clamp(14px, 1vw, 17px); */
-  font-size: 40000px;
+  font-size: clamp(14px, 1vw, 17px);
   font-weight: 300;
-  line-height: 1;
+  line-height: 1.15;
   color: var(--seven-cream);
   white-space: nowrap;
 }
@@ -62,9 +61,9 @@
 .about-section__title {
   margin: 0;
   font-family: var(--font-display);
-  font-size: clamp(88px, 8.8vw, 132px);
-  font-weight: 500;
-  line-height: 0.84;
+  font-size: clamp(86px, 8vw, 124px);
+  font-weight: 400;
+  line-height: 0.88;
   letter-spacing: 0;
   color: var(--seven-cream);
 }
@@ -79,7 +78,7 @@
 
 .about-section__content {
   width: 100%;
-  padding: clamp(72px, 7vw, 108px) 28px clamp(78px, 7vw, 116px);
+  padding: clamp(66px, 6vw, 96px) 28px clamp(74px, 6.6vw, 104px);
   background: var(--seven-cream);
 }
 
@@ -89,7 +88,7 @@
   display: grid;
   grid-template-columns: minmax(0, 1fr) 430px;
   align-items: center;
-  gap: clamp(64px, 7vw, 108px);
+  gap: clamp(58px, 6vw, 92px);
 }
 
 .about-section__text-panel {
@@ -102,7 +101,7 @@
   font-family: var(--font-body);
   font-size: clamp(20px, 1.42vw, 23px);
   font-weight: 300;
-  line-height: 1.12;
+  line-height: 1.28;
   color: var(--seven-ink);
 }
 
@@ -248,28 +247,27 @@
   }
 
   .about-section__title {
-    font-size: 118px;
+    font-size: 110px;
   }
 
   .about-section__eyebrow {
-    margin-left: px;
-    font-size: 20px;
+    font-size: 16px;
   }
 
   .about-section__content {
-    padding-top: 78px;
-    padding-bottom: 88px;
+    padding-top: 72px;
+    padding-bottom: 84px;
   }
 
   .about-section__bio {
     width: min(1040px, 100%);
     grid-template-columns: minmax(0, 1fr) 390px;
-    gap: 76px;
+    gap: 68px;
   }
 
   .about-section__copy {
     max-width: 520px;
-    font-size: 21px;
+    font-size: 20px;
   }
 
   .about-section__copy p + p {
@@ -298,6 +296,33 @@
   }
 }
 
+@media (max-width: 1100px) {
+  .about-section__hero {
+    height: 390px;
+  }
+
+  .about-section__title {
+    font-size: clamp(92px, 10vw, 104px);
+  }
+
+  .about-section__bio {
+    grid-template-columns: minmax(0, 1fr) 360px;
+    gap: 52px;
+  }
+
+  .about-section__copy {
+    font-size: 19px;
+  }
+
+  .about-section__photo-panel {
+    min-height: 490px;
+  }
+
+  .about-section__portrait-frame {
+    width: min(360px, 100%);
+  }
+}
+
 @media (max-width: 768px) {
   .about-section__hero {
     height: 330px;
@@ -322,11 +347,11 @@
 
   .about-section__title {
     font-size: clamp(62px, 18vw, 76px);
-    line-height: 0.88;
+    line-height: 0.92;
   }
 
   .about-section__content {
-    padding: 44px 20px 58px;
+    padding: 48px 20px 62px;
   }
 
   .about-section__bio {
@@ -336,7 +361,7 @@
   }
 
   .about-section__copy {
-    max-width: none;
+    max-width: 620px;
     font-size: 17px;
     line-height: 1.25;
   }

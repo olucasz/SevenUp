@@ -27,21 +27,15 @@
   --font-body: "Area Normal", system-ui, sans-serif;
 
   --page-width: 1280px;
-  --nav-width: 1320px;
+  --nav-width: 1180px;
+  --page-gutter: clamp(20px, 4vw, 56px);
+  --page-gutter-wide: clamp(28px, 6vw, 96px);
 
-  --header-height: 75px;
+  --header-height: 68px;
 
   --z-base: 1;
   --z-content: 5;
   --z-header: 20;
-}
-body {
-  margin: 0;
-  min-width: 320px;
-  overflow-x: hidden;
-  background: var(--seven-cream);
-  color: var(--seven-ink);
-  font-family: var(--font-body);
 }
 
 /* ajuste os caminhos quando tiver os arquivos reais */
@@ -78,19 +72,28 @@ body {
 
 html {
   scroll-behavior: smooth;
+  color-scheme: light;
 }
 
 body {
   margin: 0;
   min-width: 320px;
+  overflow-x: hidden;
   background: var(--seven-cream);
   color: var(--seven-ink);
   font-family: var(--font-body);
+  line-height: 1.45;
   padding-top: var(--header-height);
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
 }
 
 main {
   width: 100%;
+}
+
+main > section {
+  scroll-margin-top: var(--header-height);
 }
 
 img {
@@ -101,6 +104,13 @@ img {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+button,
+a,
+summary {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: rgba(96, 50, 28, 0.16);
 }
 
 button,
@@ -117,7 +127,7 @@ select {
 
 @media (max-width: 768px) {
   :root {
-    --header-height: 64px;
+    --header-height: 58px;
   }
 
   html,
@@ -140,5 +150,16 @@ select {
   video,
   iframe {
     max-width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
   }
 }

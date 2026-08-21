@@ -95,13 +95,13 @@
   }
 
   .reviews-section__inner {
-    width: calc(100% - 48px);
+    width: min(620px, calc(100% - 48px));
   }
 
   .review-card {
-    padding: 34px 0 38px;
+    padding: 32px 0 36px;
     grid-template-columns: 1fr;
-    gap: 22px;
+    gap: 18px;
   }
 
   .review-card + .review-card {
@@ -110,7 +110,7 @@
   }
 
   .review-card__meta h3 {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.08;
   }
 
@@ -127,7 +127,7 @@
   }
 
   .review-card blockquote {
-    font-size: 17px;
-    line-height: 1.42;
+    font-size: 16.5px;
+    line-height: 1.48;
   }
 }

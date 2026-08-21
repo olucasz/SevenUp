@@ -17,7 +17,7 @@
   position: relative;
   isolation: isolate;
   width: 100%;
-  height: 420px;
+  height: clamp(350px, 29vw, 400px);
   background: var(--seven-cream);
   overflow: hidden;
 }
@@ -43,16 +43,16 @@
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
   align-items: end;
-  gap: 72px;
-  padding-bottom: 58px;
+  gap: clamp(44px, 5vw, 68px);
+  padding-bottom: clamp(44px, 4vw, 56px);
 }
 
 .clinic-section__title {
   margin: 0;
   font-family: var(--font-body);
-  font-size: clamp(150px, 7vw, 112px);
-  font-weight: 500;
-  line-height: 0.9;
+  font-size: clamp(92px, 8vw, 118px);
+  font-weight: 400;
+  line-height: 0.92;
   letter-spacing: 0;
   color: var(--seven-ink);
 }
@@ -62,8 +62,8 @@
   margin: 0 0 8px auto;
   font-family: var(--font-body);
   font-size: clamp(18px, 1.25vw, 22px);
-  font-weight: 200;
-  line-height: 1.08;
+  font-weight: 300;
+  line-height: 1.22;
   letter-spacing: 0;
   color: var(--seven-ink);
 }
@@ -82,7 +82,7 @@
 .clinic-section__gallery-row {
   width: 100%;
   display: grid;
-  height: 417px;
+  height: clamp(360px, 29vw, 417px);
 }
 
 .clinic-section__gallery-row + .clinic-section__gallery-row {
@@ -136,6 +136,27 @@
   object-position: center center;
 }
 
+@media (max-width: 1100px) {
+  .clinic-section__intro-inner {
+    width: calc(100% - 48px);
+    grid-template-columns: 1fr 0.85fr;
+    gap: 42px;
+  }
+
+  .clinic-section__title {
+    font-size: clamp(82px, 8.6vw, 96px);
+  }
+
+  .clinic-section__subtitle {
+    max-width: 340px;
+    font-size: 17px;
+  }
+
+  .clinic-section__gallery-row {
+    height: 340px;
+  }
+}
+
 @media (max-width: 768px) {
   .clinic-section__intro {
     height: auto;
@@ -163,7 +184,7 @@
 
   .clinic-section__title {
     font-size: clamp(58px, 17vw, 70px);
-    line-height: 0.88;
+    line-height: 0.92;
   }
 
   .clinic-section__subtitle {

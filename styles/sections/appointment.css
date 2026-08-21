@@ -297,6 +297,11 @@
   transform: translateY(0);
 }
 
+.appointment-form__button:focus,
+.appointment-form__button:focus-visible {
+  outline: 0;
+}
+
 .appointment-form__button:disabled {
   cursor: not-allowed;
   color: rgba(35, 24, 19, 0.5);
@@ -388,7 +393,7 @@
 
   .appointment-section__header p {
     margin-top: 14px;
-    max-width: 282px;
+    max-width: 420px;
     font-size: 14px;
     line-height: 1.36;
   }
@@ -457,6 +462,10 @@
 }
 
 @media (min-width: 560px) and (max-width: 768px) {
+  .appointment-section__card {
+    width: min(640px, 100%);
+  }
+
   .appointment-form__button {
     width: min(380px, 100%);
   }
