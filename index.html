@@ -418,7 +418,7 @@
           <label class="appointment-form__consent" for="appointment-privacy">
             <input id="appointment-privacy" type="checkbox" name="privacidade" required />
             <span>
-              Aceito que a Clínica SevenUp processe meus dados pessoais para fins de contato e agendamento de consultas, conforme descrito na Política de Privacidade.
+              Aceito que a Clínica SevenUp processe meus dados pessoais para fins de contato e agendamento de consultas, conforme descrito na <a href="./politica-de-privacidade.html">Política de Privacidade</a>.
             </span>
           </label>
 
@@ -469,31 +469,68 @@
     </section>
     <footer class="site-footer">
       <div class="site-footer__inner">
-        <a class="site-footer__brand" href="#inicio" aria-label="SevenUp Clínica">
-          <img src="./assets/footer/logoFOOTER.png" alt="SevenUp Clínica" />
-        </a>
+        <div class="site-footer__brand-block">
+          <a class="site-footer__brand" href="#inicio" aria-label="SevenUp Clínica">
+            <img src="./assets/footer/logoFOOTER.png" alt="SevenUp Clínica" />
+          </a>
+        </div>
 
         <nav class="site-footer__nav" aria-label="Navegação do rodapé">
           <div class="site-footer__group">
-            <h2>Navegação</h2>
             <a href="#inicio">Início</a>
             <a href="#tratamentos">Tratamentos</a>
             <a href="#clinica">A Clínica</a>
+            <a href="#faq">FAQ</a>
           </div>
 
           <div class="site-footer__group site-footer__group--secondary">
             <a href="#quem-somos">Quem Somos</a>
             <a href="#depoimentos">Depoimentos</a>
             <a href="#localizacao">Localização</a>
-            <a href="#faq">FAQ</a>
+            <a href="./politica-de-privacidade.html">Política de Privacidade</a>
           </div>
         </nav>
 
-        <div class="site-footer__group site-footer__social">
-          <h2>Redes Sociais</h2>
-          <a href="#" target="_blank" rel="noopener">Instagram</a>
-          <a href="#" target="_blank" rel="noopener">Facebook</a>
-          <a href="#" target="_blank" rel="noopener">WhatsApp</a>
+        <div class="site-footer__contact">
+          <h2>Redes / Contato</h2>
+
+          <div class="site-footer__social-list" aria-label="Redes sociais e contato">
+            <a class="site-footer__social-link" href="https://instagram.com/clinicasevenup" target="_blank" rel="noopener" aria-label="Instagram da Clínica SevenUp">
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                <circle cx="12" cy="12" r="4"></circle>
+                <path d="M17.5 6.5h.01"></path>
+              </svg>
+            </a>
+
+            <a class="site-footer__social-link" href="https://facebook.com/clinicasevenup" target="_blank" rel="noopener" aria-label="Facebook da Clínica SevenUp">
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M15 8h2V4h-2c-3.3 0-5 2-5 5v2H7v4h3v5h4v-5h3l1-4h-4V9c0-.7.3-1 1-1Z"></path>
+              </svg>
+            </a>
+
+            <a class="site-footer__social-link" href="mailto:clinicasevenup@gmail.com" aria-label="Enviar e-mail para a Clínica SevenUp">
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M4 6h16v12H4z"></path>
+                <path d="m4 7 8 6 8-6"></path>
+              </svg>
+            </a>
+          </div>
+
+          <a class="site-footer__email" href="mailto:clinicasevenup@gmail.com">clinicasevenup@gmail.com</a>
+        </div>
+      </div>
+
+      <div class="site-footer__legal">
+        <address class="site-footer__address">
+          R. José Bonifácio, 200 - Centro, Santo Antônio da Platina - PR, CEP 86.430-000
+        </address>
+        <p>Clínica Seven Up Ltda · CNPJ 46.021.338/0001-20 · Responsável Técnica: Dra. Silvia Letícia da Silveira Jacinto · CRF nº 21694</p>
+        <p>Os resultados podem variar de pessoa para pessoa. Toda intervenção estética passa por avaliação prévia profissional antes da indicação de qualquer procedimento.</p>
+        <div class="site-footer__bottom">
+          <p>
+            <span>© 2026 Clínica SevenUp. Todos os direitos reservados.</span>
+          </p>
         </div>
       </div>
     </footer>

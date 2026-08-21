@@ -261,6 +261,25 @@
   outline-offset: 3px;
 }
 
+.appointment-form__consent a {
+  color: var(--seven-cream);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition:
+    color 180ms ease,
+    opacity 180ms ease;
+}
+
+.appointment-form__consent a:hover {
+  opacity: 0.82;
+}
+
+.appointment-form__consent a:focus-visible {
+  outline: 2px solid rgba(255, 247, 234, 0.72);
+  outline-offset: 3px;
+}
+
 .appointment-form__button {
   width: min(360px, 100%);
   min-height: 56px;
