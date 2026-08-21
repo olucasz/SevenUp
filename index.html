@@ -392,41 +392,41 @@
           <p>Insira seus dados abaixo. Nossa equipe entrará em contato para agendar o melhor dia e horário.</p>
         </header>
 
-        <form class="appointment-form" action="#" method="post">
+        <form class="appointment-form" action="#" method="post" aria-describedby="appointment-form-note">
           <div class="appointment-form__row">
-            <label class="appointment-form__field">
-              <span>Nome Completo:</span>
-              <input type="text" name="nome" autocomplete="name" />
+            <label class="appointment-form__field" for="appointment-name">
+              <span>Nome completo</span>
+              <input id="appointment-name" type="text" name="nome" autocomplete="name" placeholder="Seu nome" required />
             </label>
 
-            <label class="appointment-form__field">
-              <span>Telefone / WhasApp:</span>
-              <input type="tel" name="telefone" autocomplete="tel" />
+            <label class="appointment-form__field" for="appointment-phone">
+              <span>Telefone / WhatsApp</span>
+              <input id="appointment-phone" type="tel" name="telefone" autocomplete="tel" inputmode="tel" placeholder="(43) 99999-0000" required />
             </label>
           </div>
 
-          <label class="appointment-form__field">
-            <span>E-mail (Opcional)</span>
-            <input type="email" name="email" autocomplete="email" />
+          <label class="appointment-form__field" for="appointment-email">
+            <span>E-mail opcional</span>
+            <input id="appointment-email" type="email" name="email" autocomplete="email" inputmode="email" placeholder="voce@email.com" spellcheck="false" />
           </label>
 
-          <label class="appointment-form__field">
+          <label class="appointment-form__field" for="appointment-message">
             <span>Como podemos ajudar você?</span>
-            <textarea name="mensagem"></textarea>
+            <textarea id="appointment-message" name="mensagem" rows="4" placeholder="Conte brevemente o que você busca" required></textarea>
           </label>
 
-          <label class="appointment-form__consent">
-            <input type="checkbox" name="privacidade" />
+          <label class="appointment-form__consent" for="appointment-privacy">
+            <input id="appointment-privacy" type="checkbox" name="privacidade" required />
             <span>
               Aceito que a Clínica SevenUp processe meus dados pessoais para fins de contato e agendamento de consultas, conforme descrito na Política de Privacidade.
             </span>
           </label>
 
           <button class="appointment-form__button" type="button">
-            Solicitar Agendamento!
+            Solicitar Agendamento
           </button>
 
-          <p class="appointment-form__note">
+          <p class="appointment-form__note" id="appointment-form-note">
             Seus dados são usados apenas para retorno sobre sua avaliação e não são compartilhados com terceiros.
           </p>
         </form>
