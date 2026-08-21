@@ -21,11 +21,31 @@
         <img src="./assets/Home/LogoHeader.svg" alt="SevenUp Clínica" />
       </a>
 
+      <button class="site-mobile-toggle" type="button" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="site-mobile-menu">
+        <span class="site-mobile-toggle__text">Menu</span>
+        <span class="site-mobile-toggle__icon" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+
       <ul class="site-nav__group site-nav__group--right">
         <li><a href="#quem-somos">Quem Somos</a></li>
         <li><a href="#depoimentos">Depoimentos</a></li>
         <li><a href="#localizacao">Localização</a></li>
       </ul>
+
+      <div class="site-mobile-menu" id="site-mobile-menu" aria-hidden="true">
+        <div class="site-mobile-menu__inner">
+          <a href="#inicio">Início</a>
+          <a href="#tratamentos">Tratamentos</a>
+          <a href="#clinica">Clínica</a>
+          <a href="#quem-somos">Quem Somos</a>
+          <a href="#depoimentos">Depoimentos</a>
+          <a href="#localizacao">Localização</a>
+        </div>
+      </div>
     </nav>
   </header>
 
@@ -535,6 +555,7 @@
       </div>
     </footer>
   </main>
+  <script src="./scripts/mobile-menu.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js" defer></script>
   <script src="./scripts/motion.js" defer></script>
