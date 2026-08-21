@@ -325,7 +325,7 @@
 
 @media (max-width: 768px) {
   .about-section__hero {
-    height: 330px;
+    height: 292px;
   }
 
   .about-section__watermark {
@@ -346,18 +346,18 @@
   }
 
   .about-section__title {
-    font-size: clamp(62px, 18vw, 76px);
+    font-size: clamp(58px, 17vw, 70px);
     line-height: 0.92;
   }
 
   .about-section__content {
-    padding: 48px 20px 62px;
+    padding: 40px 20px 54px;
   }
 
   .about-section__bio {
     width: 100%;
     grid-template-columns: 1fr;
-    gap: 34px;
+    gap: 28px;
   }
 
   .about-section__copy {
@@ -372,7 +372,7 @@
 
   .about-section__photo-panel {
     min-height: auto;
-    padding: 18px 12px 0;
+    padding: 12px 12px 0;
   }
 
   .about-section__photo-panel::before {
@@ -390,7 +390,7 @@
   }
 
   .about-section__portrait-frame {
-    width: min(330px, 100%);
+    width: min(310px, 100%);
   }
 
   .about-section__portrait-frame::before {
@@ -413,5 +413,20 @@
     margin-top: 6px;
     font-size: 14px;
     line-height: 1.1;
+  }
+}
+
+@media (max-width: 768px) and (max-height: 740px) {
+  .about-section__hero {
+    height: 260px;
+  }
+
+  .about-section__heading {
+    padding-bottom: 26px;
+  }
+
+  .about-section__content {
+    padding-top: 34px;
+    padding-bottom: 48px;
   }
 }

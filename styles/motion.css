@@ -1,0 +1,51 @@
+/* =========================
+   Motion + Interaction Layer
+========================= */
+
+.hero-section__cta,
+.location-section__route,
+.appointment-form__button,
+.service-item__content a,
+.site-footer__group a {
+  transform-origin: center;
+}
+
+.faq-item--animated p {
+  overflow: hidden;
+  will-change: height, opacity;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .hero-section__image,
+  .service-item__image,
+  .clinic-section__photo img,
+  .about-section__portrait {
+    transition:
+      transform 720ms var(--motion-ease-soft),
+      filter 720ms var(--motion-ease-soft);
+  }
+
+  .hero-section__image-frame:hover .hero-section__image,
+  .service-item__media:hover .service-item__image {
+    transform: scale(1.024) translateY(-2px);
+  }
+
+  .clinic-section__photo:hover img,
+  .about-section__portrait-frame:hover .about-section__portrait {
+    transform: scale(1.018);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-section__image,
+  .service-item__image,
+  .clinic-section__photo img,
+  .about-section__portrait,
+  .faq-item--animated p {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+  }
+}

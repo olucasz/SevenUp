@@ -127,6 +127,16 @@
   transform: translateX(4px);
 }
 
+.service-item__content a:focus-visible {
+  outline: 2px solid rgba(255, 247, 234, 0.62);
+  outline-offset: 5px;
+}
+
+.service-item__content a:active {
+  opacity: 0.7;
+  transform: translateX(2px);
+}
+
 .service-item__content a span {
   display: inline-block;
   margin-left: 3px;
@@ -253,19 +263,19 @@
   }
 
   .services-section__intro {
-    min-height: 250px;
-    padding: 46px 20px 40px;
+    min-height: 220px;
+    padding: 38px 20px 34px;
     border-bottom-width: 1px;
   }
 
   .services-section__title {
-    font-size: clamp(42px, 12vw, 48px);
+    font-size: clamp(40px, 11.5vw, 46px);
     line-height: 0.94;
   }
 
   .services-section__subtitle {
     max-width: 318px;
-    margin-top: 16px;
+    margin-top: 14px;
     font-size: 16px;
     line-height: 1.22;
   }
@@ -282,8 +292,8 @@
     order: 1;
     grid-column: auto;
     grid-row: auto;
-    height: min(60vw, 240px);
-    min-height: 206px;
+    height: min(54vw, 220px);
+    min-height: 188px;
   }
 
   .service-item__content,
@@ -292,25 +302,45 @@
     grid-column: auto;
     grid-row: auto;
     min-height: auto;
-    padding: 28px 22px 34px;
+    padding: 24px 20px 28px;
     align-items: flex-start;
   }
 
   .service-item__content h3 {
     max-width: 330px;
-    font-size: clamp(30px, 9vw, 38px);
+    font-size: clamp(29px, 8.8vw, 36px);
     line-height: 1.02;
   }
 
   .service-item__content p {
     max-width: none;
-    margin-top: 16px;
+    margin-top: 12px;
     font-size: 16px;
     line-height: 1.24;
   }
 
   .service-item__content a {
-    margin-top: 24px;
+    margin-top: 18px;
     font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) and (max-height: 740px) {
+  .services-section__intro {
+    min-height: 200px;
+    padding-top: 34px;
+    padding-bottom: 30px;
+  }
+
+  .service-item__media,
+  .service-item--image-right .service-item__media {
+    height: min(50vw, 204px);
+    min-height: 176px;
+  }
+
+  .service-item__content,
+  .service-item--image-right .service-item__content {
+    padding-top: 22px;
+    padding-bottom: 26px;
   }
 }

@@ -288,8 +288,8 @@
 
 .appointment-form__button:hover {
   background: var(--seven-nav-cream);
-  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.22);
-  transform: translateY(-2px);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.22);
+  transform: translateY(-1px);
 }
 
 .appointment-form__button:active {
@@ -297,9 +297,14 @@
   transform: translateY(0);
 }
 
-.appointment-form__button:focus,
+.appointment-form__button:focus {
+  outline: none;
+}
+
 .appointment-form__button:focus-visible {
-  outline: 0;
+  outline: 2px solid rgba(255, 247, 234, 0.72);
+  outline-offset: 4px;
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.22);
 }
 
 .appointment-form__button:disabled {
@@ -366,7 +371,7 @@
 
 @media (max-width: 768px) {
   .appointment-section {
-    padding: 56px 16px 64px;
+    padding: 46px 16px 54px;
   }
 
   .appointment-section__watermark {
@@ -378,33 +383,33 @@
 
   .appointment-section__card {
     width: 100%;
-    padding: 34px 20px 30px;
+    padding: 30px 18px 28px;
     border-radius: 18px;
   }
 
   .appointment-section__header {
-    margin-bottom: 28px;
+    margin-bottom: 24px;
   }
 
   .appointment-section__header h2 {
-    font-size: clamp(34px, 9.7vw, 38px);
-    line-height: 1;
+    font-size: clamp(31px, 8.8vw, 36px);
+    line-height: 0.98;
   }
 
   .appointment-section__header p {
-    margin-top: 14px;
-    max-width: 420px;
+    margin-top: 12px;
+    max-width: 360px;
     font-size: 14px;
     line-height: 1.36;
   }
 
   .appointment-form {
-    gap: 16px;
+    gap: 14px;
   }
 
   .appointment-form__row {
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 14px;
   }
 
   .appointment-form > .appointment-form__field {
@@ -423,14 +428,14 @@
   .appointment-form input[type="text"],
   .appointment-form input[type="tel"],
   .appointment-form input[type="email"] {
-    height: 52px;
+    height: 50px;
     padding: 0 14px;
     border-radius: 8px;
     font-size: 15px;
   }
 
   .appointment-form textarea {
-    min-height: 120px;
+    min-height: 108px;
     padding: 14px 15px;
     border-radius: 8px;
     font-size: 15px;
@@ -446,7 +451,7 @@
 
   .appointment-form__button {
     width: 100%;
-    min-height: 56px;
+    min-height: 52px;
     margin-top: 2px;
     padding: 0 18px;
     border-radius: 12px;

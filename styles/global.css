@@ -8,6 +8,7 @@
 @import url("./sections/appointment.css");
 @import url("./sections/faq.css");
 @import url("./sections/footer.css");
+@import url("./motion.css");
 /* depois vêm variáveis, fontes, reset etc */
 
 /* =========================
@@ -32,6 +33,13 @@
   --page-gutter-wide: clamp(28px, 6vw, 96px);
 
   --header-height: 68px;
+
+  --motion-ease-main: cubic-bezier(0.16, 1, 0.3, 1);
+  --motion-ease-soft: cubic-bezier(0.22, 1, 0.36, 1);
+  --motion-duration-fast: 160ms;
+  --motion-duration-reveal: 560ms;
+  --motion-duration-hero: 720ms;
+  --motion-distance: 18px;
 
   --z-base: 1;
   --z-content: 5;
@@ -71,7 +79,6 @@
 }
 
 html {
-  scroll-behavior: smooth;
   color-scheme: light;
 }
 
@@ -127,7 +134,9 @@ select {
 
 @media (max-width: 768px) {
   :root {
-    --header-height: 58px;
+    --header-height: 54px;
+    --motion-distance: 10px;
+    --motion-duration-reveal: 440ms;
   }
 
   html,
@@ -158,8 +167,9 @@ select {
   *::before,
   *::after {
     scroll-behavior: auto !important;
-    transition-duration: 0.01ms !important;
-    animation-duration: 0.01ms !important;
+    transition: none !important;
+    animation: none !important;
+    transition-delay: 0ms !important;
     animation-iteration-count: 1 !important;
   }
 }

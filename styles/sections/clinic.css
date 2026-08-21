@@ -160,7 +160,7 @@
 @media (max-width: 768px) {
   .clinic-section__intro {
     height: auto;
-    min-height: 338px;
+    min-height: 286px;
   }
 
   .clinic-section__watermark {
@@ -173,24 +173,24 @@
   .clinic-section__intro-inner {
     width: calc(100% - 40px);
     height: auto;
-    min-height: 338px;
+    min-height: 286px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-end;
-    gap: 18px;
-    padding-bottom: 38px;
+    gap: 12px;
+    padding-bottom: 32px;
   }
 
   .clinic-section__title {
-    font-size: clamp(58px, 17vw, 70px);
+    font-size: clamp(54px, 16vw, 64px);
     line-height: 0.92;
   }
 
   .clinic-section__subtitle {
-    max-width: 320px;
+    max-width: 300px;
     margin: 0;
-    font-size: 17px;
+    font-size: 16px;
     line-height: 1.2;
   }
 
@@ -210,11 +210,22 @@
   }
 
   .clinic-section__photo {
-    height: 236px;
+    height: 214px;
   }
 
   .clinic-section__photo + .clinic-section__photo {
     border-left: 0;
     border-top: 4px solid var(--seven-brown);
+  }
+}
+
+@media (max-width: 768px) and (max-height: 740px) {
+  .clinic-section__intro,
+  .clinic-section__intro-inner {
+    min-height: 260px;
+  }
+
+  .clinic-section__photo {
+    height: 200px;
   }
 }

@@ -91,7 +91,7 @@
 
 @media (max-width: 768px) {
   .reviews-section {
-    padding: 58px 0 64px;
+    padding: 46px 0 52px;
   }
 
   .reviews-section__inner {
@@ -99,9 +99,9 @@
   }
 
   .review-card {
-    padding: 32px 0 36px;
+    padding: 28px 0 32px;
     grid-template-columns: 1fr;
-    gap: 18px;
+    gap: 14px;
   }
 
   .review-card + .review-card {
@@ -127,7 +127,7 @@
   }
 
   .review-card blockquote {
-    font-size: 16.5px;
-    line-height: 1.48;
+    font-size: 16px;
+    line-height: 1.44;
   }
 }
