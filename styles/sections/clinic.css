@@ -215,7 +215,7 @@
 
   .clinic-section__photo + .clinic-section__photo {
     border-left: 0;
-    border-top: 4px solid var(--seven-brown);
+    /* border-top: 4px solid var(--seven-brown); */
   }
 }
 

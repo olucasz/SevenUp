@@ -418,13 +418,18 @@ const rewriteImages = async (html) => {
 };
 
 const copyHtmlReferencedAssets = async (html) => {
-  const refs = [
+  const attrRefs = [
     ...html.matchAll(/(?:src|href)="(\.\/assets\/[^"]+\.(?:svg|png|webp|avif|jpg|jpeg|woff2))"/gi),
     ...html.matchAll(/content="(\/assets\/[^"]+\.(?:svg|png|webp|avif|jpg|jpeg))"/gi),
-  ];
+  ].map((match) => match[1]);
+  const srcsetRefs = [...html.matchAll(/srcset="([^"]+)"/gi)]
+    .flatMap((match) => match[1].split(","))
+    .map((candidate) => candidate.trim().split(/\s+/)[0])
+    .filter((candidate) => /^\.\/assets\/[^"]+\.(?:svg|png|webp|avif|jpg|jpeg|woff2)$/i.test(candidate));
+  const refs = [...new Set([...attrRefs, ...srcsetRefs])];
 
-  for (const match of refs) {
-    const ref = match[1].replace(/^\//, "./");
+  for (const assetRef of refs) {
+    const ref = assetRef.replace(/^\//, "./");
 
     if (/\.(webp|avif)$/i.test(ref) && ref.includes("./assets/media/")) {
       continue;

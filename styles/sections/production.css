@@ -272,7 +272,20 @@
 
 @media (max-width: 768px) {
   .floating-whatsapp {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    min-height: 52px;
+    padding: 0;
     display: inline-flex;
+    border-radius: 50%;
+  }
+
+  .floating-whatsapp__icon {
+    width: 25px;
+    height: 25px;
+    display: block;
+    fill: currentColor;
   }
 
   .cookie-consent {

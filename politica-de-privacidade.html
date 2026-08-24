@@ -22,7 +22,10 @@
       </ul>
 
       <a class="site-header__logo" href="./index.html#inicio" aria-label="SevenUp Clínica">
-        <img src="./assets/Home/LogoHeader.svg" alt="SevenUp Clínica" width="121" height="84" />
+        <picture>
+          <source media="(max-width: 768px)" srcset="./assets/brand/sevenup-mark-mobile.svg" type="image/svg+xml" />
+          <img src="./assets/Home/LogoHeader.svg" alt="SevenUp Clínica" width="121" height="84" />
+        </picture>
       </a>
 
       <button class="site-mobile-toggle" type="button" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="site-mobile-menu">
@@ -158,7 +161,10 @@
     <div class="site-footer__inner">
       <div class="site-footer__brand-block">
         <a class="site-footer__brand" href="./index.html#inicio" aria-label="SevenUp Clínica">
-          <img src="./assets/footer/logoFOOTER.png" alt="SevenUp Clínica" width="261" height="55" loading="lazy" decoding="async" />
+          <picture>
+            <source media="(max-width: 768px)" srcset="./assets/brand/sevenup-footer-mobile@1x.png 1x, ./assets/brand/sevenup-footer-mobile@2x.png 2x, ./assets/brand/sevenup-footer-mobile@3x.png 3x" type="image/png" />
+            <img src="./assets/footer/logoFOOTER.png" alt="SevenUp Clínica" width="261" height="55" loading="lazy" decoding="async" />
+          </picture>
         </a>
       </div>
 
