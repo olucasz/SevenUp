@@ -1,0 +1,20 @@
+{
+  "name": "sevenup-landing",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Landing page de producao da Clinica SevenUp.",
+  "type": "module",
+  "scripts": {
+    "dev": "python3 -m http.server 5500",
+    "build": "node tools/build.mjs",
+    "verify": "node tools/verify-production.mjs",
+    "verify-production": "node tools/verify-production.mjs",
+    "check": "npm run build && npm run verify"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0",
+    "gsap": "^3.15.0",
+    "png-to-ico": "^2.1.8",
+    "sharp": "^0.35.3"
+  }
+}

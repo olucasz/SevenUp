@@ -1,2 +1,10 @@
 .DS_Store
 /https:/
+node_modules/
+dist/
+reports/
+.env
+.env.*
+!.env.example
+api/config.local.php
+npm-debug.log*

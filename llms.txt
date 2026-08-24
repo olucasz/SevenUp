@@ -1,0 +1,31 @@
+# Clínica SevenUp
+
+> Clínica de estética avançada localizada em Santo Antônio da Platina, Paraná.
+
+## Sobre
+A Clínica SevenUp oferece tratamentos estéticos apresentados no site, com atendimento mediante avaliação profissional.
+
+## Serviços
+- Toxina Botulínica
+- Preenchimento
+- Bioestimuladores
+- Protocolos de Pele
+- Estética Corporal
+- Estética In & Out
+
+## Responsável técnica
+Dra. Silvia Letícia da Silveira Jacinto — CRF nº 21694.
+
+## Localização
+R. José Bonifácio, 200 - Centro
+Santo Antônio da Platina - PR
+CEP 86430-000
+
+## Contato
+Email: clinicasevenup@gmail.com
+WhatsApp: +5543996036417
+Site: SITE_URL pendente
+
+## Páginas principais
+- Home: apresentação da clínica, tratamentos, localização, FAQ e agendamento.
+- Política de Privacidade: informações sobre tratamento de dados e privacidade.

@@ -101,8 +101,8 @@
 }
 
 .site-footer__social-link {
-  width: 34px;
-  height: 34px;
+  width: 44px;
+  height: 44px;
   display: inline-grid;
   place-items: center;
   border: 1px solid rgba(96, 50, 28, 0.12);
@@ -285,8 +285,8 @@
   }
 
   .site-footer__social-link {
-    width: 32px;
-    height: 32px;
+    width: 44px;
+    height: 44px;
   }
 
   .site-footer__legal {

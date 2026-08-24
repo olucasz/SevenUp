@@ -244,8 +244,8 @@
     position: absolute;
     right: 12px;
     top: 50%;
-    width: 42px;
-    height: 42px;
+    width: 44px;
+    height: 44px;
     display: inline-grid;
     place-items: center;
     padding: 0;
@@ -369,7 +369,7 @@
   }
 
   .site-mobile-menu a {
-    min-height: 34px;
+    min-height: 44px;
     display: flex;
     align-items: center;
     padding: 0;
@@ -502,7 +502,7 @@
   }
 
   .site-mobile-menu a {
-    min-height: 32px;
+    min-height: 44px;
     justify-content: center;
   }
 

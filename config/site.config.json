@@ -1,0 +1,66 @@
+{
+  "brandName": "Clinica SevenUp",
+  "brandNameDisplay": "Clínica SevenUp",
+  "legalName": "Clínica Seven Up Ltda",
+  "cnpj": "46.021.338/0001-20",
+  "email": "clinicasevenup@gmail.com",
+  "phoneDisplay": "(43) 99603-6417",
+  "phoneE164": "+5543996036417",
+  "whatsappNumber": "5543996036417",
+  "streetAddress": "R. José Bonifácio, 200 - Centro",
+  "addressLocality": "Santo Antônio da Platina",
+  "addressRegion": "PR",
+  "postalCode": "86430-000",
+  "addressCountry": "BR",
+  "openingHours": {
+    "weekdays": "Segunda a sexta, 09h às 18h",
+    "saturday": "Sábado sob agendamento prévio"
+  },
+  "responsibleTechnical": "Dra. Silvia Letícia da Silveira Jacinto — CRF nº 21694",
+  "siteUrl": "https://clinicasevenup.com.br",
+  "canonicalHost": "clinicasevenup.com.br",
+  "googleBusinessUrl": "https://share.google/wDuGoTZ5oIP1zpH73",
+  "googleMapsPlaceUrl": "",
+  "googleMapsDirectionsUrl": "https://www.google.com/maps/dir//Clínica+Seven+UP,+R.+José+Bonifácio,+200+-+Centro,+Santo+Antônio+da+Platina+-+PR,+86430-000/@-23.4090584,-50.3578624,8408m/data=!3m1!1e3!4m8!4m7!1m0!1m5!1m1!1s0x94ea8361d96091a3:0x4d37994e49897bc3!2m2!1d-50.0730897!2d-23.2928033?entry=ttu&g_ep=EgoyMDI2MDgxOS4wIKXMDSoASAFQAw%3D%3D",
+  "googleMapsSearchUrl": "https://www.google.com/maps/search/?api=1&query=R.%20Jos%C3%A9%20Bonif%C3%A1cio%2C%20200%20-%20Centro%2C%20Santo%20Ant%C3%B4nio%20da%20Platina%20-%20PR%2C%2086430-000",
+  "geo": {
+    "latitude": -23.2928033,
+    "longitude": -50.0730897
+  },
+  "instagram": "https://instagram.com/clinicasevenup",
+  "facebook": "https://facebook.com/clinicasevenup",
+  "tracking": {
+    "gtmId": "GTM-T9JQHD3M",
+    "ga4Id": "",
+    "googleAdsId": "",
+    "googleAdsFormConversionLabel": "",
+    "googleAdsWhatsappConversionLabel": "",
+    "metaPixelId": ""
+  },
+  "services": [
+    {
+      "name": "Toxina Botulínica",
+      "description": "Suavização de rugas dinâmicas e linhas de expressão com aplicação precisa para manter a expressividade e naturalidade."
+    },
+    {
+      "name": "Preenchimento",
+      "description": "Uso de ácido hialurônico para restaurar volumes perdidos, definir contornos e harmonizar traços faciais com sofisticação."
+    },
+    {
+      "name": "Bioestimuladores",
+      "description": "Estímulo profundo da produção natural de colágeno para combater a flacidez e recuperar a firmeza e sustentação da pele."
+    },
+    {
+      "name": "Protocolos de Pele",
+      "description": "Tratamentos combinados como peeling e microagulhamento para renovação celular, hidratação profunda e redução de manchas."
+    },
+    {
+      "name": "Estética Corporal",
+      "description": "Protocolos focados em gordura localizada, flacidez e celulite, sempre aliados a um planejamento metabólico individualizado."
+    },
+    {
+      "name": "Estética In & Out",
+      "description": "Acompanhamento integrado unindo o cuidado externo da pele ao suporte interno nutricional e farmacêutico personalizado."
+    }
+  ]
+}

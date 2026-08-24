@@ -9,6 +9,7 @@
 @import url("./sections/faq.css");
 @import url("./sections/privacy.css");
 @import url("./sections/footer.css");
+@import url("./sections/production.css");
 @import url("./motion.css");
 /* depois vêm variáveis, fontes, reset etc */
 
@@ -25,8 +26,8 @@
   --seven-taupe: #c1ab91;
   --seven-muted: #d9d9d9;
 
-  --font-display: "Tosh A", system-ui, sans-serif;
-  --font-body: "Area Normal", system-ui, sans-serif;
+  --font-display: "tosh-a", sans-serif;
+  --font-body: "area-normal-light", sans-serif;
 
   --page-width: 1280px;
   --nav-width: 1180px;
@@ -45,28 +46,6 @@
   --z-base: 1;
   --z-content: 5;
   --z-header: 20;
-}
-
-/* ajuste os caminhos quando tiver os arquivos reais */
-@font-face {
-  font-family: "Tosh A";
-  src: url("../assets/fonts/ToshA-Light.woff2") format("woff2");
-  font-weight: 300;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Tosh A";
-  src: url("../assets/fonts/ToshA-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Area Normal";
-  src: url("../assets/fonts/AreaNormal-Light.woff2") format("woff2");
-  font-weight: 300;
-  font-display: swap;
 }
 
 /* =========================
@@ -90,6 +69,8 @@ body {
   background: var(--seven-cream);
   color: var(--seven-ink);
   font-family: var(--font-body);
+  font-weight: 300;
+  font-style: normal;
   line-height: 1.45;
   padding-top: var(--header-height);
   text-rendering: geometricPrecision;

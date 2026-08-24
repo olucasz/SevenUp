@@ -14,19 +14,19 @@ This document records the current design before future improvements. Do not repl
 
 Tokens:
 
-- `--font-display: "Tosh A", system-ui, sans-serif`
-- `--font-body: "Area Normal", system-ui, sans-serif`
+- `--font-display: "tosh-a", sans-serif`
+- `--font-body: "area-normal-light", sans-serif`
 
 Loaded font faces:
 
-- `Tosh A` light 300
-- `Tosh A` regular 400
-- `Area Normal` light 300
+- Adobe Fonts kit `https://use.typekit.net/sog3usj.css`
+- `tosh-a` weights 100/300/400/500/700/900
+- `area-normal-light` weight 300
 
 Observed usage:
 
-- Display headings use `Tosh A`, usually 300 to 500 weight.
-- Body copy uses `Area Normal`, often 200 to 300 in CSS even though only 300 is declared locally.
+- Display headings use `tosh-a`, usually 300 to 500 weight.
+- Body copy uses `area-normal-light`, with light editorial rendering.
 - Hero headline uses very large display type, tight line-height around `0.82` to `0.96`.
 - Section titles commonly use clamp ranges from roughly `46px` mobile to `132px` desktop.
 - Body copy is compact: line-height often `1.04` to `1.25`.

@@ -61,7 +61,7 @@ None identified in this setup pass.
 ## P1 - High Priority
 
 - No production form handling or validation behavior is present. The form uses `action="#"`, button `type="button"`, and no error/success/loading states.
-- Some font weights used in CSS (`200`, `450`, `500`) do not have matching local `@font-face` declarations, so rendering may depend on browser synthesis or fallback behavior.
+- Historical note: the original local font setup had mismatched weights. Production now loads the official Adobe Fonts kit.
 - No formal build/lint/test pipeline exists. This is acceptable for a small static page, but production readiness depends on manual/browser QA.
 
 ## P2 - Improvements
