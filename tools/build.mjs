@@ -577,7 +577,69 @@ const makeOgImage = async (config) => {
 };
 
 const makeFavicons = async (config) => {
-  const logo = path.join(root, "assets/Home/LogoHeader.svg");
+  const faviconSource = path.join(root, "assets/brand/favicon.svg");
+  const sourceMetadata = await sharp(faviconSource).metadata();
+  const sourceWidth = sourceMetadata.width || 512;
+  const sourceHeight = sourceMetadata.height || 512;
+  const sampleWidth = Math.min(2000, sourceWidth);
+  const { data, info } = await sharp(faviconSource)
+    .resize({ width: sampleWidth })
+    .ensureAlpha()
+    .raw()
+    .toBuffer({ resolveWithObject: true });
+  let minX = info.width;
+  let minY = info.height;
+  let maxX = -1;
+  let maxY = -1;
+
+  for (let y = 0; y < info.height; y++) {
+    for (let x = 0; x < info.width; x++) {
+      const index = (y * info.width + x) * info.channels;
+      const red = data[index];
+      const green = data[index + 1];
+      const blue = data[index + 2];
+      const alpha = data[index + 3];
+
+      if (alpha > 16 && red < 80 && green < 70 && blue < 60) {
+        minX = Math.min(minX, x);
+        minY = Math.min(minY, y);
+        maxX = Math.max(maxX, x);
+        maxY = Math.max(maxY, y);
+      }
+    }
+  }
+
+  const hasVisualBounds = maxX >= minX && maxY >= minY;
+  const scaleX = sourceWidth / info.width;
+  const scaleY = sourceHeight / info.height;
+  const bounds = hasVisualBounds
+    ? {
+        left: Math.floor(minX * scaleX),
+        top: Math.floor(minY * scaleY),
+        right: Math.ceil((maxX + 1) * scaleX),
+        bottom: Math.ceil((maxY + 1) * scaleY),
+      }
+    : {
+        left: 0,
+        top: 0,
+        right: sourceWidth,
+        bottom: sourceHeight,
+      };
+  const visualWidth = bounds.right - bounds.left;
+  const visualHeight = bounds.bottom - bounds.top;
+  const padding = Math.round(Math.max(visualWidth, visualHeight) * 0.18);
+  const side = Math.min(sourceWidth, sourceHeight, Math.max(visualWidth, visualHeight) + padding * 2);
+  const crop = {
+    left: Math.max(0, Math.min(sourceWidth - side, Math.round(bounds.left + visualWidth / 2 - side / 2))),
+    top: Math.max(0, Math.min(sourceHeight - side, Math.round(bounds.top + visualHeight / 2 - side / 2))),
+    width: side,
+    height: side,
+  };
+  const normalizedIcon = await sharp(faviconSource)
+    .extract(crop)
+    .resize(1024, 1024, { fit: "contain", background: "#fff7ea" })
+    .png({ compressionLevel: 9, adaptiveFiltering: true })
+    .toBuffer();
   const sizes = [
     [16, "favicon-16x16.png"],
     [32, "favicon-32x32.png"],
@@ -588,9 +650,9 @@ const makeFavicons = async (config) => {
   const pngBuffers = [];
 
   for (const [size, name] of sizes) {
-    const buffer = await sharp(logo)
-      .resize(size, size, { fit: "contain", background: "#ece5d9" })
-      .png()
+    const buffer = await sharp(normalizedIcon)
+      .resize(size, size, { fit: "contain" })
+      .png({ compressionLevel: 9, adaptiveFiltering: true })
       .toBuffer();
     await writeFile(distPath(name), buffer);
 
